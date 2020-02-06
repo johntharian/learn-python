@@ -5,7 +5,7 @@ dictionary ={
     'c':3,
     'd':4
 }
-print(dictionary['b'])
+print(dictionary['b']) 
 print(dictionary.get('x'))
 print('z' in dictionary)
 print('a' in dictionary.keys())
