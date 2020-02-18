@@ -117,11 +117,19 @@ print(doubleChar(mystr))
 # no_teen_sum(2, 13, 1) → 3
 # no_teen_sum(2, 1, 14) → 3
 
-# def no_teen_sum(a, b, c):
+def no_teen_sum(a, b, c):
   # CODE GOES HERE
-# def fix_teen(n):
+  return fix_teen(a)+fix_teen(b)+fix_teen(c)
+def fix_teen(n):
   # CODE GOES HERE
-
+  if n in range(13,20) and n !=15 and n !=16:
+        n=0
+        return n
+        
+a=input("Enter number : ")
+b=input("Enter number : ") 
+c=input("Enter number : ")
+print(no_teen_sum(a,b,c))
 #####################
 ## -- PROBLEM 6 -- ##
 #####################
