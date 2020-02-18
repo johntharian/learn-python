@@ -119,12 +119,12 @@ print(doubleChar(mystr))
 
 def no_teen_sum(a, b, c):
   # CODE GOES HERE
-  return fix_teen(a)+fix_teen(b)+fix_teen(c)
+  return int(fix_teen(a)) + int(fix_teen(b)) + int(fix_teen(c))
 def fix_teen(n):
   # CODE GOES HERE
-  if n in range(13,20) and n !=15 and n !=16:
+  if n in   range(13,20) and n!=15 and n!=16:
         n=0
-        return n
+  return n
         
 a=input("Enter number : ")
 b=input("Enter number : ") 
@@ -142,5 +142,12 @@ print(no_teen_sum(a,b,c))
 # count_evens([2, 2, 0]) → 3
 # count_evens([1, 3, 5]) → 0
 
-# def count_evens(nums):
+def count_evens(num):
   # CODE GOES HERE
+  k=0
+  for element in  num:
+        if int(element) % 2 == 0:
+              k+=1
+  return k
+num=input("Enter number : ")
+print(count_evens(num))
