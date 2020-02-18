@@ -71,7 +71,12 @@ print(stringBits(mystring))
 
 def end_other(a, b):
   # CODE GOES HERE
-  
+  a=a.lower()
+  b=b.lower()
+  return (b.endswith(a) or a.endswith(b))
+a=input("Enter first word ") 
+b=input("Enter second word ") 
+print(end_other(a,b))
 #####################
 ## -- PROBLEM 4 -- ##
 #####################
@@ -83,10 +88,15 @@ def end_other(a, b):
 # doubleChar('AAbb') → 'AAAAbbbb'
 # doubleChar('Hi-There') → 'HHii--TThheerree'
 
-# def doubleChar(str):
+def doubleChar(mystr):
   # CODE GOES HERE
-
-
+  r=mystr
+  x=""
+  for i in mystr:
+    x=r[i]+mystr[i]
+  return x   
+mystr=input("Enter text ")
+print(doubleChar(mystr))
 #####################
 ## -- PROBLEM 5 -- ##
 #####################
