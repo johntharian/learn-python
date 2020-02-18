@@ -90,10 +90,9 @@ print(end_other(a,b))
 
 def doubleChar(mystr):
   # CODE GOES HERE
-  r=mystr
   x=""
-  for i in mystr:
-    x=r[i]+mystr[i]
+  for char in mystr:
+    x+=char*2
   return x   
 mystr=input("Enter text ")
 print(doubleChar(mystr))
