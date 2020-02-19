@@ -46,9 +46,13 @@ def generate_clues(code,guess):
     else :
         return clues   
 
-def simple_guess_game():
+
+    
+
+while generate_clues!="Code Correct":
     x=get_guess()
     r=generate_random()
-    print(generate_clues(r,x))
-
-simple_guess_game()
+    report=generate_clues(r,x)
+    print("Here is the result: ")
+    for element in report:
+        print(element)
