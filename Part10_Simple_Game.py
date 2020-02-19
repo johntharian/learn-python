@@ -22,14 +22,33 @@
 # Here are some useful hints:
 
 # Try to figure out what this code is doing and how it might be useful to you
+
 import random
-digits = list(range(10))
-random.shuffle(digits)
-print(digits[:3])
+def get_guess():
+    return list(input("What is your guess? "))
 
-# Another hint:
-guess = input("What is your guess? ")
-print(guess)
+def generate_random():
+    digits=[str(num) for num in range(10)]
+    random.shuffle(digits)
+    return digits[:3]
 
-# Think about how you will compare the input to the random number, what format
-# should they be in? Maybe some sort of sequence? Watch the Lecture video for more hints!
+def generate_clues(code,guess):
+    if guess ==code:
+        return "Code Correct"
+    clues=[]
+    for ind,num in enumerate(guess):
+        if num==code[ind]:
+            clues.append("match")
+        elif num in code:
+            clues.append("Close")
+    if clues==[]:
+       return ["Nope"]  
+    else :
+        return clues   
+
+def simple_guess_game():
+    x=get_guess()
+    r=generate_random()
+    print(generate_clues(r,x))
+
+simple_guess_game()
